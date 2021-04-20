@@ -1,7 +1,21 @@
-.hero {
-  font-size: 3rem;
+:root {
+  --color-primary: #2584ff;
+  --color-secondary: #00d9ff;
+  --color-accent: #ff3400;
+  --color-header: #1b0760;
+  --color-body: #918ca4;
+}
+
+html {
+  font-size: 62.5%;
 }
 
 body {
-  background-color: gold;
+  padding: 3rem;
+  background-color: ;
+  font-size: 3rem;
+}
+
+.hero {
+  font-size: 3rem;
 }
