@@ -341,7 +341,7 @@ a {
   font-size: 2rem;
   font-weight: 300;
   letter-spacing: 0.25rem;
-  display:  block;
+  display: block;
 }
 
 .plan .list__item {
@@ -378,9 +378,33 @@ a {
   .font__description {
     font-size: 1.7rem;
   }
+}
 
-  .
+/* -- Media Object -- */
+.media {
+  display: flex;
+}
 
+.media__title {
+  margin-top: 0;
+  font-size: 2.4rem;
+}
 
+.media__body {
+  margin: 0 2rem;
+  font-size: 2rem;
+}
 
+.media__image {
+  margin-top: 2rem;
+}
+
+@media screen and (min-width: 1024px) {
+  .media__title {
+    font-size: 1.8rem;
+  }
+
+  .media__body {
+    font-size: 1.8rem;
+  }
 }
