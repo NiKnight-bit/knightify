@@ -22,7 +22,7 @@ html {
 }
 
 body {
-  padding: 3rem;
+  /* padding: 3rem; */
   font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
     Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   font-size: 2.4rem;
@@ -50,7 +50,7 @@ h3 {
 }
 
 p {
-  margin: 0;
+  margin-top: 0;
 }
 
 a {
@@ -175,6 +175,10 @@ a {
   fill: var(--color-secondary);
 }
 
+.icon--white {
+  fill: white;
+}
+
 .icon-container {
   background-color: #f3f9f8;
   width: 64px;
@@ -183,6 +187,15 @@ a {
   display: inline-flex;
   justify-content: center;
   align-items: center;
+}
+
+.icon-container--accent {
+  background-color: var(--color-accent);
+}
+
+.icon--smaller {
+  width: 30px;
+  height: 30px;
 }
 
 /* -- Buttons -- */
@@ -418,6 +431,7 @@ a {
   color: var(--color-body-darker);
   letter-spacing: -1px;
   line-height: 3.8rem;
+  margin-left: 6rem;
 }
 
 .quote__text::before,
@@ -425,8 +439,8 @@ a {
   content: '"';
 }
 
-.quote .media {
-  padding: 4rem 0;
+.grid {
+  align-items: center;
 }
 
 .quote__author {
@@ -477,5 +491,38 @@ a {
 @media screen and (min-width: 1024px) {
   .grid--1x3 {
     grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* -- Testimonials -- */
+
+.testimonial {
+  padding: 3rem;
+}
+
+.testimonial__image {
+  position: relative;
+}
+
+.testimonial__image > img {
+  position: relative;
+  width: 100%;
+}
+
+.testimonial__image > .icon-container {
+  position: absolute;
+  top: 3rem;
+  right: -32px;
+}
+
+@media screen and (min-width: 768px) {
+  .testimonial .quote,
+  .testimonial .quote__author {
+    font-size: 2.4rem;
+  }
+
+  .testimonial .quote {
+    align-items: center;
+    margin-left: 6rem;
   }
 }
