@@ -51,6 +51,7 @@ h3 {
 
 p {
   margin-top: 0;
+  color: white;
 }
 
 a {
@@ -256,6 +257,11 @@ a {
 
 .btn--accent:hover {
   background-color: hsl(12, 100%, 60%);
+}
+
+.btn--stretched {
+  padding-right: 6rem;
+  padding-left: 6rem;
 }
 
 .btn--block {
@@ -524,5 +530,45 @@ a {
   .testimonial .quote {
     align-items: center;
     margin-left: 6rem;
+  }
+}
+
+/* -- Callouts -- */
+.callout {
+  padding: 4rem;
+  border-radius: 5px;
+}
+
+.callout--primary {
+  background-color: var(--color-primary);
+}
+
+.callout__heading {
+  color: white;
+  margin-top: 0;
+  font-size: 3rem;
+}
+
+.callout .btn {
+  /* align-self: center; */
+  justify-self: center;
+}
+
+.callout__content {
+  text-align: center;
+}
+
+@media screen and (min-width: 768px) {
+  .callout__content {
+    text-align: left;
+  }
+
+  .callout .btn {
+    justify-self: start;
+    margin: 0 2rem;
+  }
+
+  .callout .grid--1x2 {
+    grid-template-columns: 1fr auto;
   }
 }
