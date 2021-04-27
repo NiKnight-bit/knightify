@@ -209,16 +209,22 @@ a {
 .btn {
   border-radius: 40px;
   border: 0;
-  color: white;
   cursor: pointer;
   font-size: 1.8rem;
   font-weight: 600;
-  outline: none;
+  margin: 1rem 0;
+  outline: 0;
   padding: 2rem 3rem;
+  text-align: center;
   text-transform: uppercase;
   white-space: nowrap;
-  text-align: center;
-  margin: 1rem 0;
+}
+
+.btn .icon {
+  width: 2rem;
+  height: 2rem;
+  margin-right: 1rem;
+  vertical-align: middle;
 }
 
 .btn--primary {
@@ -259,6 +265,7 @@ a {
 
 .btn--accent {
   background-color: var(--color-accent);
+  color: #fff;
 }
 
 .btn--accent:hover {
@@ -287,10 +294,10 @@ a {
   border: 1px solid var(--color-lightText);
   color: var(--color-header);
   font-size: 2rem;
-  margin: 1rem 0;
+  /* margin: 1rem 0; */
   outline: none;
   padding: 1.5rem 3.5rem;
-  white-space: nowrap;
+  /* white-space: nowrap; */
 }
 
 .input::placeholder {
@@ -306,7 +313,7 @@ a {
 .input-group .input {
   border: 0;
   flex-grow: 1;
-  padding: 1rem 1.5rem;
+  padding: 1.5rem 2rem;
 }
 
 .input-group .btn {
@@ -336,6 +343,10 @@ a {
   color: white;
 }
 
+.card--primary .badge--primary {
+  background-color: hsl(214, 100%, 50%);
+}
+
 .card--secondary .card__header {
   background-color: var(--color-secondary);
   color: white;
@@ -346,6 +357,11 @@ a {
 }
 
 /* -- Plans -- */
+
+.plan {
+  transition: transform 0.3s ease-out;
+}
+
 .plan__name {
   color: white;
   margin: 0;
@@ -376,6 +392,10 @@ a {
   letter-spacing: 1px;
 }
 
+/* .plan--popular {
+  transform: scale(1.1);
+} */
+
 .plan--popular .card__header {
   position: relative;
 }
@@ -389,7 +409,11 @@ a {
   right: 5%;
 }
 
-@media scfreen and (min-width: 1024px) {
+.plan:hover {
+  transform: scale(1.05);
+}
+
+@media screen and (min-width: 1024px) {
   .plan__name {
     font-size: 1.4rem;
   }
@@ -731,5 +755,54 @@ a {
   .hero__content {
     text-align: left;
     align-self: centre;
+  }
+}
+
+/* -- Domain block -- */
+
+.block-domain {
+  text-align: center;
+}
+.block-domain .input-group {
+  box-shadow: 0 0 30px 20px #e6ebee;
+  border: 0;
+  margin: 4rem auto;
+  max-width: 670px;
+}
+
+.block-domain__prices {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 6rem);
+  font-size: 2rem;
+  font-weight: 600;
+  justify-items: center;
+  max-width: 724px;
+  margin: 0 auto;
+}
+
+@media screen and (min-width: 768px) {
+  .block-domain__prices {
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  }
+}
+
+/* --Plans Block-- */
+.block-plans .grid {
+  gap: 4rem;
+}
+
+.block-plans .card {
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+@media screen and (min-width: 1024px) {
+  .plan--popular {
+    transform: scale(1.1);
+  }
+
+  .plan--popular:hover {
+    transform: scale(1.15);
   }
 }
